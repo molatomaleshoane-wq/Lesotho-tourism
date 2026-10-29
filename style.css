@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #2d3748;
+    scroll-behavior: smooth;
+}
+
+/* ==========================================================================
+   2. HERO CAROUSEL SETTINGS
+   ========================================================================== */
+.carousel-item {
+    position: relative;
+    height: 60vh;
+    background-color: #000;
+}
+
+.carousel-img {
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* ==========================================================================
+   3. CARD DESIGN & HOVER EFFECTS (Destinations & Accommodations)
+   ========================================================================== */
+.card-img-fixed {
+    height: 220px;
+    object-fit: cover;
+}
+
+.custom-card {
+    border-radius: 14px !important;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
+    background: #ffffff;
+}
+
+.custom-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ==========================================================================
+   4. SERVICE BOXES STYLE
+   ========================================================================== */
+.service-box {
+    transition: all 0.3s ease;
+    border-radius: 16px !important;
+    background-color: #ffffff;
+}
+
+.service-icon {
+    font-size: 3rem;
+}
+
+.service-box:hover {
+    transform: translateY(-4px);
+    border-color: #0d6efd !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important;
+}
+
+.active-service {
+    border-top: 4px solid #0d6efd !important;
+}
+
+/* ==========================================================================
+   5. GALLERY HOVER CONTROLS
+   ========================================================================== */
+.gallery-card {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px !important;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img-container {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-card:hover .gallery-img {
+    transform: scale(1.1);
+}
+
+/* Photo framework transitions */
+.animate-fade {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.97); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* ==========================================================================
+   6. MOBILE RESPONSIVENESS OVERRIDES
+   ========================================================================== */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 45vh;
+    }
+
+    .display-3 {
+        font-size: 2.2rem !important;
+    }
+}
+/* Gallery page */
+.gallery-hero {
+    background:
+        linear-gradient(rgba(10, 20, 30, 0.55), rgba(10, 20, 30, 0.65)),
+        url("AZCV0036.WEBP") center / cover no-repeat;
+}
+
+.gallery-item {
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0.75rem;
+    background: #fff;
+    text-align: left;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-item:hover,
+.gallery-item:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.gallery-item span {
+    display: block;
+    padding: 0.9rem 1rem;
+    color: #212529;
+    font-weight: 600;
+}
